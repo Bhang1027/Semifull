@@ -1,5 +1,7 @@
 # Semifull
 
+![Semifull — Bigger video. Tabs stay.](outputs/store-minimal-v9/promo-marquee-1400x560.png)
+
 Expand YouTube to fill your browser tab while keeping your tabs, address bar, and taskbar visible.
 
 Semifull adds one button immediately to the left of YouTube's fullscreen control. Click it or press **G** to switch between the expanded player and the normal page.
@@ -55,3 +57,4 @@ No dependencies or build step are required. The extension uses plain JavaScript,
 After downloading an update or editing the files, click **Reload** on Semifull's card in the extensions page, then refresh YouTube. Locally installed extensions do not update automatically.
 
 Semifull is an independent project and is not affiliated with YouTube or Google.
+
