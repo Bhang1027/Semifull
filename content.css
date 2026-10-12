@@ -1,0 +1,100 @@
+/* YouTube adds padding and a tall line-height to control SVGs. Reset both
+   for this icon so its size and alignment do not depend on that styling. */
+#movie_player .semifull-button {
+  color: white;
+  position: relative;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+#movie_player .semifull-button svg {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 24px !important;
+  height: 24px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  pointer-events: none;
+}
+.semifull-button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: -5px;
+}
+html.semifull-active,
+html.semifull-active body {
+  overflow: hidden !important;
+  background: #000 !important;
+}
+html.semifull-active body { visibility: hidden !important; }
+/* Remove containing blocks and clipping without moving the live player. */
+html.semifull-active .semifull-ancestor {
+  transform: none !important;
+  translate: none !important;
+  rotate: none !important;
+  scale: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  perspective: none !important;
+  contain: none !important;
+  content-visibility: visible !important;
+  will-change: auto !important;
+  overflow: visible !important;
+  clip-path: none !important;
+  z-index: auto !important;
+}
+html.semifull-active #movie_player.semifull-player {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  z-index: 2147483647 !important;
+  visibility: visible !important;
+  background: #000 !important;
+}
+.semifull-player .html5-video-container {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.semifull-player video.html5-main-video {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+.semifull-player .ytp-chrome-bottom {
+  width: calc(100% - 24px) !important;
+  left: 12px !important;
+  bottom: 0 !important;
+}
+.semifull-player .ytp-gradient-bottom,
+.semifull-player .ytp-gradient-top { width: 100% !important; }
+#movie_player:fullscreen .semifull-button { display: none !important; }
+
+/* Reuse YouTube's tooltip typography, background, padding and badge styles. */
+#movie_player .semifull-tooltip {
+  position: absolute;
+  z-index: 2147483647;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: none;
+}
+#movie_player .semifull-tooltip .ytp-tooltip-keyboard-shortcut {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+}

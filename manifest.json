@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Semifull",
+  "version": "0.1.0",
+  "description": "Fill your YouTube tab with video while keeping your tabs and taskbar visible. One button to enter, Esc to exit.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon-v6-16.png",
+    "32": "icons/icon-v6-32.png",
+    "48": "icons/icon-v6-48.png",
+    "128": "icons/icon-v6-128.png"
+  }
+}
